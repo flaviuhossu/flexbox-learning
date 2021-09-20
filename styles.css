@@ -1,0 +1,129 @@
+.form-row {
+  display: flex;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-right: 1rem;
+}
+.form-row input {
+  padding-left: 0.1rem;
+  flex: 1;
+}
+/* COLUMN LAYOUT */
+.column-layout {
+  display: flex;
+}
+.sidebar-left {
+  order: 0;
+  flex: 1;
+}
+.main-column {
+  order: 1;
+  flex: 2;
+}
+.sidebar-right {
+  order: 2;
+  flex: 1;
+}
+/* FEATURES 3 COLUMNS */
+
+.feature-flex-container {
+  box-sizing: border-box;
+
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+
+  /* If i don't want equal height for all the flex-children
+  I can add : */
+  /* align-items: flex-start; */
+
+  /* Default: */
+  align-items: stretch;
+}
+
+.feature-1 {
+  background-color: rgb(160, 186, 193);
+  /* Cat % sa ia din spatiu fiecare element */
+  flex-basis: 30%;
+}
+.feature-2 {
+  background-color: rgb(189, 227, 176);
+  /* Cat % sa ia din spatiu fiecare element */
+  flex-basis: 30%;
+}
+.feature-3 {
+  background-color: rgb(163, 144, 178);
+  /* Cat % sa ia din spatiu fiecare element */
+  flex-basis: 30%;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 900px) {
+  .feature-flex-container {
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+/* MULTIPLE ROWS OF ITEMS */
+.rows-flex-container {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+.box {
+  display: flex;
+  width: 150px;
+  height: 100px;
+  background-color: chocolate;
+  border: 2px solid black;
+}
+.box h1 {
+  margin: auto;
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* SIMPLE CENTERING */
+.center-container-for-container {
+  display: flex;
+  justify-content: center;
+}
+.center-flex-container {
+  display: flex;
+  background-color: black;
+  height: 350px;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-heading {
+  color: white;
+  margin: auto;
+}
+
+/* COLUMN LAYOUT */
+.columns-flex-container {
+  display: flex;
+  border: 2px solid black;
+  margin-bottom: 5rem;
+}
+.main-header {
+  padding: 1rem;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+}
+.A {
+  flex: 1;
+  min-width: 200px;
+  background-color: yellowgreen;
+  padding: 0.5rem;
+}
+.B {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: blueviolet;
+}
